@@ -15,6 +15,8 @@ import com.math.calculator.dto.AboutDTO;
 import com.math.calculator.util.Calculator;
 import com.math.calculator.util.RateLimiter;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @RestController
 @CrossOrigin
 public class AboutController {
@@ -40,6 +42,7 @@ public class AboutController {
 	}
 
 	@GetMapping(value = "/api/calculator", produces = MediaType.APPLICATION_JSON_VALUE)
+	@Tag(name = "Public Facing", description = "Yes")
 	public Calculator calculate(@RequestParam("a") int a, @RequestParam("b") int b,
 			@RequestParam("operator") String operator) {
 		Calculator calc = new Calculator("Please try after some time.");

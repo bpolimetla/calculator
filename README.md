@@ -10,8 +10,8 @@ This disables default apache2 in Ubuntu
 This show listening ports
 >sudo lsof -i -P -n | grep LISTEN
 
-http://localhost:8090/api/about
+http://localhost:8080/api/about
 
-http://localhost:8090/api/calculator?a=1&b=2&operator=p
+http://localhost:8080/api/calculator?a=1&b=2&operator=p
 
- http://localhost:8090/swagger-ui/index.html
+ http://localhost:8080/swagger-ui/index.html
